@@ -2,6 +2,12 @@
 
 Brew Bliss is a production-style, beginner-friendly coffee shop e-commerce website built with HTML, CSS, JavaScript, Python Flask, and SQLite. It is designed as a realistic premium coffee business website with storefront pages, checkout, customer accounts, and an admin panel.
 
+Live Netlify storefront:
+
+```text
+https://brew-blisscoffee.netlify.app/
+```
+
 ## Features
 
 - Home page with rich coffee shop styling
