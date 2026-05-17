@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Vanilla cloud macchiato">
+  <rect width="800" height="600" fill="#d9d3c7"/>
+  <rect y="410" width="800" height="190" fill="#ada296"/>
+  <ellipse cx="400" cy="440" rx="235" ry="44" fill="#74675c" opacity=".35"/>
+  <path d="M270 160h260l-32 300H302z" fill="#fff6eb" opacity=".85"/>
+  <path d="M300 250h200v74H300z" fill="#e7c59b"/>
+  <path d="M292 322h214l-14 108H306z" fill="#8d4f2e"/>
+  <ellipse cx="400" cy="160" rx="130" ry="48" fill="#fffdf7"/>
+  <path d="M342 142c38-56 88 16 126-28 24 42 4 78-64 82-64 4-88-16-62-54z" fill="#fffaf1"/>
+</svg>

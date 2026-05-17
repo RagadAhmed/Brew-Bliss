@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Iced cold brew coffee">
+  <rect width="800" height="600" fill="#d8d2c9"/>
+  <rect y="415" width="800" height="185" fill="#aaa197"/>
+  <ellipse cx="405" cy="465" rx="160" ry="36" fill="#796e63" opacity=".42"/>
+  <path d="M295 130h220l-38 330H333z" fill="#eaf8ff" opacity=".72"/>
+  <path d="M317 250h176l-24 200H342z" fill="#2a160f" opacity=".92"/>
+  <path d="M326 174h45l-10 52h-45zM420 162h50l-8 62h-55z" fill="#f7ffff" opacity=".66"/>
+  <circle cx="520" cy="245" r="7" fill="#f7ffff" opacity=".72"/>
+  <circle cx="285" cy="315" r="6" fill="#f7ffff" opacity=".72"/>
+  <circle cx="505" cy="365" r="5" fill="#f7ffff" opacity=".72"/>
+</svg>

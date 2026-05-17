@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Hot latte with tulip latte art">
+  <rect width="800" height="600" fill="#d6d0c5"/>
+  <rect y="410" width="800" height="190" fill="#b9afa2"/>
+  <ellipse cx="400" cy="430" rx="250" ry="45" fill="#918579" opacity=".45"/>
+  <ellipse cx="390" cy="330" rx="190" ry="132" fill="#2d2b2a"/>
+  <ellipse cx="390" cy="305" rx="180" ry="108" fill="#654027"/>
+  <ellipse cx="390" cy="296" rx="150" ry="82" fill="#cf9a67"/>
+  <path d="M390 228c-62 48-62 98 0 148 62-50 62-100 0-148z" fill="#f5e4c9"/>
+  <path d="M342 276c30-26 66-24 96 0-26 22-70 24-96 0zM438 276c30-26 66-24 96 0-26 22-70 24-96 0z" fill="#f5e4c9"/>
+  <path d="M395 230c-20-42 28-56 8-102M440 242c-13-30 24-46 10-76" fill="none" stroke="#f3eadc" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+</svg>

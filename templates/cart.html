@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Cart | Brew Bliss{% endblock %}
+{% block content %}
+<section class="page-hero compact">
+    <p class="eyebrow">Your order</p>
+    <h1>Cart</h1>
+</section>
+
+<section class="section cart-layout">
+    <div class="cart-items">
+        {% for item in items %}
+            <article class="cart-item">
+                {% if item.product['image'].startswith('http') %}
+                    <img src="{{ item.product['image'] }}" alt="{{ item.product['name'] }}">
+                {% else %}
+                    <img src="{{ url_for('static', filename=item.product['image']) }}" alt="{{ item.product['name'] }}">
+                {% endif %}
+                <div>
+                    <h3>{{ item.product["name"] }}</h3>
+                    <p>${{ "%.2f"|format(item.product["price"]) }} each</p>
+                    <form method="post" action="{{ url_for('update_cart', product_id=item.product['id']) }}" class="quantity-form">
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="0">
+                        <button class="btn light" type="submit">Update</button>
+                    </form>
+                </div>
+                <div class="line-total">
+                    <strong>${{ "%.2f"|format(item.subtotal) }}</strong>
+                    <form method="post" action="{{ url_for('remove_from_cart', product_id=item.product['id']) }}">
+                        <button class="text-danger" type="submit">Remove</button>
+                    </form>
+                </div>
+            </article>
+        {% else %}
+            <p class="empty">Your cart is empty.</p>
+        {% endfor %}
+    </div>
+    <aside class="summary-card">
+        <h2>Order Summary</h2>
+        <div class="summary-row"><span>Subtotal</span><strong>${{ "%.2f"|format(total) }}</strong></div>
+        <div class="summary-row"><span>Estimated tax</span><strong>$0.00</strong></div>
+        <div class="summary-row total"><span>Total</span><strong>${{ "%.2f"|format(total) }}</strong></div>
+        <a class="btn primary full" href="{{ url_for('checkout') }}">Checkout</a>
+    </aside>
+</section>
+{% endblock %}

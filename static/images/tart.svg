@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Berry tart">
+  <rect width="800" height="600" fill="#d8d1c7"/>
+  <rect y="410" width="800" height="190" fill="#aea398"/>
+  <ellipse cx="400" cy="430" rx="250" ry="54" fill="#f1ece4"/>
+  <ellipse cx="400" cy="342" rx="180" ry="90" fill="#c98235"/>
+  <ellipse cx="400" cy="326" rx="150" ry="66" fill="#f3d6a2"/>
+  <circle cx="350" cy="312" r="28" fill="#a6213f"/>
+  <circle cx="410" cy="300" r="30" fill="#253f72"/>
+  <circle cx="462" cy="325" r="26" fill="#a6213f"/>
+  <circle cx="388" cy="348" r="24" fill="#253f72"/>
+</svg>

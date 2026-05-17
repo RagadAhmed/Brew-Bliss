@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Shop Products | Brew Bliss{% endblock %}
+{% block content %}
+<section class="page-hero compact">
+    <p class="eyebrow">Online cafe menu</p>
+    <h1>Shop Brew Bliss</h1>
+</section>
+
+<section class="section">
+    <form class="filters" method="get">
+        <input type="search" name="search" value="{{ search }}" placeholder="Search latte, cold brew, croissant...">
+        <select name="category">
+            <option value="">All categories</option>
+            {% for category in categories %}
+                <option value="{{ category['name'] }}" {% if selected_category == category['name'] %}selected{% endif %}>
+                    {{ category["name"] }}
+                </option>
+            {% endfor %}
+        </select>
+        <select name="sort">
+            <option value="featured" {% if sort == 'featured' %}selected{% endif %}>Featured</option>
+            <option value="rating" {% if sort == 'rating' %}selected{% endif %}>Top rated</option>
+            <option value="price_low" {% if sort == 'price_low' %}selected{% endif %}>Price low to high</option>
+            <option value="price_high" {% if sort == 'price_high' %}selected{% endif %}>Price high to low</option>
+            <option value="newest" {% if sort == 'newest' %}selected{% endif %}>Newest</option>
+        </select>
+        <button class="btn primary" type="submit">Search</button>
+        <a class="btn light" href="{{ url_for('products') }}">Clear</a>
+    </form>
+
+    <div class="product-grid">
+        {% for product in products %}
+            {% include "partials/product_card.html" %}
+        {% else %}
+            <p class="empty">No products matched your search.</p>
+        {% endfor %}
+    </div>
+    <nav class="pagination" aria-label="Product pagination">
+        {% for number in range(1, total_pages + 1) %}
+            <a class="{% if page == number %}active{% endif %}" href="{{ url_for('products', search=search, category=selected_category, sort=sort, page=number) }}">{{ number }}</a>
+        {% endfor %}
+    </nav>
+</section>
+{% endblock %}

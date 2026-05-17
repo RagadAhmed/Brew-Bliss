@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard | Brew Bliss{% endblock %}
+{% block content %}
+<section class="admin-shell">
+    <div class="admin-heading">
+        <div>
+            <p class="eyebrow">Admin</p>
+            <h1>Dashboard</h1>
+        </div>
+        <div class="admin-actions">
+            <a class="btn light" href="{{ url_for('admin_orders') }}">View Orders</a>
+            <a class="btn light" href="{{ url_for('admin_categories') }}">Categories</a>
+            <a class="btn primary" href="{{ url_for('admin_add_product') }}">Add Product</a>
+        </div>
+    </div>
+    <div class="stats-grid">
+        <div><span>Products</span><strong>{{ products_count }}</strong></div>
+        <div><span>Orders</span><strong>{{ orders_count }}</strong></div>
+        <div><span>Revenue</span><strong>${{ "%.2f"|format(revenue) }}</strong></div>
+        <div><span>Customers</span><strong>{{ customers_count }}</strong></div>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr><th>Name</th><th>Category</th><th>Rating</th><th>Price</th><th>Stock</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                    <tr>
+                        <td>{{ product["name"] }}</td>
+                        <td>{{ product["category"] }}</td>
+                        <td>{{ "%.1f"|format(product["rating"]) }}</td>
+                        <td>${{ "%.2f"|format(product["price"]) }}</td>
+                        <td>{{ product["stock"] }}</td>
+                        <td class="table-actions">
+                            <a href="{{ url_for('admin_edit_product', product_id=product['id']) }}">Edit</a>
+                            <form method="post" action="{{ url_for('admin_delete_product', product_id=product['id']) }}" data-confirm="Delete this product?">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

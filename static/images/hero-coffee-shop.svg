@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Modern premium coffee shop interior">
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1">
+      <stop offset="0" stop-color="#2f241e"/>
+      <stop offset="0.5" stop-color="#8a694f"/>
+      <stop offset="1" stop-color="#e9dfd0"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7a4a2e"/>
+      <stop offset="1" stop-color="#2b201b"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#wall)"/>
+  <rect y="625" width="1600" height="275" fill="url(#floor)"/>
+  <g opacity="0.95">
+    <rect x="930" y="70" width="470" height="360" fill="#171412"/>
+    <rect x="960" y="100" width="185" height="300" fill="#f7efe4"/>
+    <rect x="1185" y="100" width="185" height="300" fill="#f7efe4"/>
+    <path d="M960 100h410M960 200h410M960 300h410M1145 100v300M1185 100v300" stroke="#15120f" stroke-width="18"/>
+  </g>
+  <ellipse cx="1160" cy="180" rx="330" ry="190" fill="#fff2dd" opacity="0.28" filter="url(#soft)"/>
+  <rect x="520" y="475" width="710" height="155" rx="20" fill="#f2eadf"/>
+  <path d="M540 492h670v120H540z" fill="#fffaf5" opacity="0.55"/>
+  <path d="M580 525c120 32 234-54 350-10 110 42 174-26 260 2" fill="none" stroke="#c7b6a3" stroke-width="10" opacity="0.7"/>
+  <rect x="380" y="560" width="930" height="62" fill="#693f28"/>
+  <rect x="430" y="622" width="830" height="84" fill="#4a2c1f"/>
+  <g transform="translate(790 390)">
+    <rect x="0" y="70" width="220" height="90" rx="22" fill="#191715"/>
+    <rect x="38" y="30" width="140" height="58" rx="16" fill="#25211e"/>
+    <circle cx="62" cy="120" r="20" fill="#c98655"/>
+    <circle cx="158" cy="120" r="20" fill="#c98655"/>
+    <path d="M115 24c-22-44 38-48 12-94M155 22c-14-32 28-40 10-78M78 20c-16-28 20-38 8-70" fill="none" stroke="#efe4d2" stroke-width="9" stroke-linecap="round" opacity="0.75"/>
+  </g>
+  <g opacity="0.72">
+    <rect x="130" y="500" width="190" height="18" fill="#d6c5ad"/>
+    <rect x="145" y="518" width="160" height="92" fill="#493426"/>
+    <rect x="143" y="610" width="16" height="120" fill="#241916"/>
+    <rect x="290" y="610" width="16" height="120" fill="#241916"/>
+    <circle cx="230" cy="470" r="64" fill="#f4eee4"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Cappuccino cup">
+  <rect width="800" height="600" fill="#d7d1c7"/>
+  <rect y="410" width="800" height="190" fill="#b1a79c"/>
+  <ellipse cx="390" cy="435" rx="230" ry="44" fill="#8d8175" opacity=".4"/>
+  <path d="M245 275h290c0 118-52 178-145 178S245 393 245 275z" fill="#f2eee7"/>
+  <path d="M528 305c74-16 80 100 0 92" fill="none" stroke="#f2eee7" stroke-width="36"/>
+  <ellipse cx="390" cy="275" rx="145" ry="58" fill="#c98a52"/>
+  <ellipse cx="390" cy="270" rx="100" ry="38" fill="#f4dfc2"/>
+  <path d="M350 268c35 32 76 32 116 0" fill="none" stroke="#8b5431" stroke-width="8" stroke-linecap="round"/>
+</svg>

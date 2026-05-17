@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Golden butter croissant">
+  <rect width="800" height="600" fill="#d9d2c7"/>
+  <rect y="410" width="800" height="190" fill="#afa398"/>
+  <ellipse cx="400" cy="430" rx="285" ry="65" fill="#eee9e2"/>
+  <path d="M190 358c50-116 154-168 246-128 97 42 156 18 188-12-4 110-96 202-224 204-92 2-170-20-210-64z" fill="#d98a35"/>
+  <path d="M224 330c42-52 96-82 158-92M356 238c18 62 16 112-4 168M488 250c-18 58-30 98-76 158M580 260c-38 48-86 78-150 94" fill="none" stroke="#a85e24" stroke-width="18" stroke-linecap="round" opacity=".45"/>
+  <path d="M215 346c108 52 262 62 392-58" fill="none" stroke="#f6c36f" stroke-width="16" stroke-linecap="round" opacity=".6"/>
+</svg>

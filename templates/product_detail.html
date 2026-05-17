@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}{{ product["name"] }} | Brew Bliss{% endblock %}
+{% block content %}
+<section class="section detail-layout">
+    <div class="detail-image">
+        {% if product['image'].startswith('http') %}
+            <img src="{{ product['image'] }}" alt="{{ product['name'] }}">
+        {% else %}
+            <img src="{{ url_for('static', filename=product['image']) }}" alt="{{ product['name'] }}">
+        {% endif %}
+    </div>
+    <div class="detail-copy">
+        <p class="eyebrow">{{ product["category"] }}</p>
+        <h1>{{ product["name"] }}</h1>
+        <div class="rating large"><i class="fa-solid fa-star"></i> {{ "%.1f"|format(product["rating"]) }}</div>
+        <p>{{ product["description"] }}</p>
+        <div class="ingredients">
+            <strong>Ingredients</strong>
+            <p>{{ product["ingredients"] or "Premium cafe ingredients prepared fresh." }}</p>
+        </div>
+        <p class="stock">{{ product["stock"] }} available today</p>
+        <strong class="detail-price">${{ "%.2f"|format(product["price"]) }}</strong>
+        <form class="buy-form" method="post" action="{{ url_for('add_to_cart', product_id=product['id']) }}">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" type="number" name="quantity" value="1" min="1" max="{{ product['stock'] }}">
+            <button class="btn primary" type="submit">Add to Cart</button>
+        </form>
+    </div>
+</section>
+{% if related %}
+<section class="section">
+    <div class="section-heading">
+        <div>
+            <p class="eyebrow">You may also like</p>
+            <h2>Related Products</h2>
+        </div>
+    </div>
+    <div class="product-grid">
+        {% for product in related %}
+            {% include "partials/product_card.html" %}
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% endblock %}

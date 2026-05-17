@@ -1,0 +1,23 @@
+<article class="product-card">
+    <a class="product-image" href="{{ url_for('product_detail', product_id=product['id']) }}">
+        {% if product['image'].startswith('http') %}
+            <img src="{{ product['image'] }}" alt="{{ product['name'] }}">
+        {% else %}
+            <img src="{{ url_for('static', filename=product['image']) }}" alt="{{ product['name'] }}">
+        {% endif %}
+        {% if product["promo_tag"] %}<span class="promo-tag">{{ product["promo_tag"] }}</span>{% endif %}
+    </a>
+    <div class="product-body">
+        <p class="product-category">{{ product["category"] }}</p>
+        <h3>{{ product["name"] }}</h3>
+        <div class="rating"><i class="fa-solid fa-star"></i> {{ "%.1f"|format(product["rating"]) }}</div>
+        <p>{{ product["description"] }}</p>
+        <div class="product-row">
+            <strong>${{ "%.2f"|format(product["price"]) }}</strong>
+            <form method="post" action="{{ url_for('add_to_cart', product_id=product['id']) }}">
+                <input type="hidden" name="quantity" value="1">
+                <button class="icon-btn" type="submit" aria-label="Add {{ product['name'] }} to cart">+</button>
+            </form>
+        </div>
+    </div>
+</article>

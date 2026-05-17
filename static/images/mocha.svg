@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Mocha coffee">
+  <rect width="800" height="600" fill="#d3cdc3"/>
+  <rect y="410" width="800" height="190" fill="#aa9f92"/>
+  <ellipse cx="400" cy="440" rx="235" ry="44" fill="#74675c" opacity=".45"/>
+  <path d="M250 250h300c-8 138-64 206-150 206S258 388 250 250z" fill="#33241d"/>
+  <ellipse cx="400" cy="250" rx="150" ry="64" fill="#6f3f2a"/>
+  <path d="M295 238c70 58 138-58 210 4M310 264c62 36 124-34 180 0" fill="none" stroke="#f0dbc0" stroke-width="12" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Admin Login | Brew Bliss{% endblock %}
+{% block content %}
+<section class="auth-page">
+    <form class="form-panel auth-panel" method="post">
+        <p class="eyebrow">Store team</p>
+        <h1>Admin Login</h1>
+        <label>Email<input type="email" name="email" required value="admin@brewbliss.local"></label>
+        <label>Password<input type="password" name="password" required></label>
+        <button class="btn primary full" type="submit">Open Dashboard</button>
+    </form>
+</section>
+{% endblock %}

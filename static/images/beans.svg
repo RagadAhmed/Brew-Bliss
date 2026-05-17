@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Bag of espresso beans">
+  <rect width="800" height="600" fill="#d7d0c7"/>
+  <rect y="410" width="800" height="190" fill="#aca196"/>
+  <ellipse cx="400" cy="460" rx="200" ry="40" fill="#74675c" opacity=".35"/>
+  <path d="M275 135h250l36 335H239z" fill="#f1e4d2"/>
+  <path d="M300 160h200l20 280H280z" fill="#6c432c"/>
+  <rect x="315" y="245" width="170" height="95" rx="8" fill="#fff8ed"/>
+  <text x="400" y="286" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#3b281f">Brew</text>
+  <text x="400" y="322" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#3b281f">Bliss</text>
+  <ellipse cx="335" cy="385" rx="28" ry="18" fill="#2f1d16" transform="rotate(-25 335 385)"/>
+  <ellipse cx="410" cy="390" rx="28" ry="18" fill="#2f1d16" transform="rotate(20 410 390)"/>
+  <ellipse cx="470" cy="372" rx="28" ry="18" fill="#2f1d16" transform="rotate(-10 470 372)"/>
+</svg>
