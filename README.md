@@ -28,6 +28,8 @@ Brew Bliss is a production-style, beginner-friendly coffee shop e-commerce websi
 Brew_Bliss/
   app.py
   run_local.py
+  build_static.py
+  netlify.toml
   requirements.txt
   data/
     database.db
@@ -90,6 +92,33 @@ http://127.0.0.1:5012
 
 - Flask
 - Werkzeug
+
+## Publish on Netlify
+
+Netlify is a static hosting platform. This project includes a Netlify-ready static storefront export for the public pages. The full cart, checkout, login, SQLite, and admin backend still require Flask and run locally with `python run_local.py`.
+
+1. Push this repository to GitHub.
+2. Open Netlify and choose `Add new site` then `Import an existing project`.
+3. Select the GitHub repository.
+4. Netlify will read `netlify.toml` automatically.
+5. Confirm these settings:
+
+```text
+Build command: pip install -r requirements.txt && python build_static.py
+Publish directory: dist
+```
+
+6. Click `Deploy site`.
+
+The Netlify build exports:
+
+- Home page
+- Product catalog
+- Product detail pages
+- Static cart preview
+- A demo notice page for checkout, login, and admin links
+
+For a live production e-commerce backend, deploy Flask separately on a Python host such as Render, Railway, Fly.io, or a VPS, then connect it to a production database.
 
 ## Admin Login
 

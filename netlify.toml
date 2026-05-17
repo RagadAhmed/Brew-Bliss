@@ -1,0 +1,41 @@
+[build]
+  command = "pip install -r requirements.txt && python build_static.py"
+  publish = "dist"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[[redirects]]
+  from = "/cart/add/*"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/cart/update/*"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/cart/remove/*"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/checkout"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/login"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/register"
+  to = "/netlify-demo/"
+  status = 302
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/netlify-demo/"
+  status = 302
